@@ -1,7 +1,210 @@
-doctype html
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+doctype html(lang='en')
+head
+        // Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/
+        link(href='stylesheets/bootstrap.min.css', rel='stylesheet')
+        // Custom CSS
+        link(href='stylesheets/freelancer.css', rel='stylesheet')
+        // Custom Fonts
+        link(href='font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+        |  &#x9;
+        link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
+        |  &#x9;
+        link(href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic', rel='stylesheet', type='text/css')
+        // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+        // WARNING: Respond.js doesn't work if you view the page via file://
+        //if lt IE 9
+          script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+          |  &#x9;
+          script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+    body#page-top.index
+        // Navigation
+        nav.navbar.navbar-default.navbar-fixed-top
+            .container
+                // Brand and toggle get grouped for better mobile display
+                .navbar-header.page-scroll
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+                        span.sr-only Toggle navigation
+                        |  &#x9;
+                        span.icon-bar
+                        |  &#x9;
+                        span.icon-bar
+                        |  &#x9;
+                        span.icon-bar
+                    |  &#x9;
+                    a.navbar-brand(href='#page-top') Start Bootstrap
+                // Collect the nav links, forms, and other content for toggling
+                #bs-example-navbar-collapse-1.collapse.navbar-collapse
+                    ul.nav.navbar-nav.navbar-right
+                        li.hidden
+                            a(href='#page-top')
+                        |  &#x9;
+                        li.page-scroll
+                            a(href='#portfolio') Portfolio
+                        |  &#x9;
+                        li.page-scroll
+                            a(href='#about') About
+                        |  &#x9;
+                        li.page-scroll
+                            a(href='#contact') Contact
+                // /.navbar-collapse
+            // /.container-fluid
+        // Header
+        header
+            .container
+                .row
+                    .col-lg-12
+                        img.img-responsive(src='img/profile.png', alt='')
+                        |  &#x9;
+                        .intro-text
+                            span.name Start Bootstrap
+                            |  &#x9;
+                            hr.star-light
+                            |  &#x9;
+                            span.skills Web Developer - Graphic Artist - User Experience Designer
+        block content
+        // About Section
+        section#about.success
+            .container
+                .row
+                    .col-lg-12.text-center
+                        h2 About
+                        |  &#x9;
+                        hr.star-light
+                |  &#x9;
+                .row
+                    .col-lg-4.col-lg-offset-2
+                        p
+                            |  &#x9; Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.
+                    |  &#x9;
+                    .col-lg-4
+                        p
+                            |  &#x9; Whether you&apos;re a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!
+                    |  &#x9;
+                    .col-lg-8.col-lg-offset-2.text-center
+                        a.btn.btn-lg.btn-outline(href='#')
+                            i.fa.fa-download
+                            |  &#x9;  Download Theme
+        // Contact Section
+        section#contact
+            .container
+                .row
+                    .col-lg-12.text-center
+                        h2 Contact Me
+                        |  &#x9;
+                        hr.star-primary
+                |  &#x9;
+                .row
+                    .col-lg-8.col-lg-offset-2
+                        // To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.
+                        // The form should work on most web servers, but if the form is not working you may need to configure your web server differently.
+                        form#contactForm(name='sentMessage', novalidate='')
+                            .row.control-group
+                                .form-group.col-xs-12.floating-label-form-group.controls
+                                    label Name
+                                    |  &#x9;
+                                    input#name.form-control(type='text', placeholder='Name', required='', data-validation-required-message='Please enter your name.')
+                                    |  &#x9;
+                                    p.help-block.text-danger
+                            |  &#x9;
+                            .row.control-group
+                                .form-group.col-xs-12.floating-label-form-group.controls
+                                    label Email Address
+                                    |  &#x9;
+                                    input#email.form-control(type='email', placeholder='Email Address', required='', data-validation-required-message='Please enter your email address.')
+                                    |  &#x9;
+                                    p.help-block.text-danger
+                            |  &#x9;
+                            .row.control-group
+                                .form-group.col-xs-12.floating-label-form-group.controls
+                                    label Phone Number
+                                    |  &#x9;
+                                    input#phone.form-control(type='tel', placeholder='Phone Number', required='', data-validation-required-message='Please enter your phone number.')
+                                    |  &#x9;
+                                    p.help-block.text-danger
+                            |  &#x9;
+                            .row.control-group
+                                .form-group.col-xs-12.floating-label-form-group.controls
+                                    label Message
+                                    |  &#x9;
+                                    textarea#message.form-control(rows='5', placeholder='Message', required='', data-validation-required-message='Please enter a message.')
+                                    |  &#x9;
+                                    p.help-block.text-danger
+                            |  &#x9;
+                            br
+                            |  &#x9;
+                            #success
+                            |  &#x9;
+                            .row
+                                .form-group.col-xs-12
+                                    button.btn.btn-success.btn-lg(type='submit') Send
+        // Footer
+        footer.text-center
+            .footer-above
+                .container
+                    .row
+                        .footer-col.col-md-4
+                            h3 Location
+                            |  &#x9;
+                            p
+                                |  &#x9; 3481 Melrose Place
+                                br
+                                |  &#x9; Beverly Hills, CA 90210
+                        |  &#x9;
+                        .footer-col.col-md-4
+                            h3 Around the Web
+                            |  &#x9;
+                            ul.list-inline
+                                li
+                                    a.btn-social.btn-outline(href='#')
+                                        i.fa.fa-fw.fa-facebook
+                                |  &#x9;
+                                li
+                                    a.btn-social.btn-outline(href='#')
+                                        i.fa.fa-fw.fa-google-plus
+                                |  &#x9;
+                                li
+                                    a.btn-social.btn-outline(href='#')
+                                        i.fa.fa-fw.fa-twitter
+                                |  &#x9;
+                                li
+                                    a.btn-social.btn-outline(href='#')
+                                        i.fa.fa-fw.fa-linkedin
+                                |  &#x9;
+                                li
+                                    a.btn-social.btn-outline(href='#')
+                                        i.fa.fa-fw.fa-dribbble
+                        |  &#x9;
+                        .footer-col.col-md-4
+                            h3 About Freelancer
+                            |  &#x9;
+                            p
+                                |  &#x9; Freelance is a free to use, open source Bootstrap theme created by
+                                a(href='http://startbootstrap.com') Start Bootstrap
+                                |  &#x9; .
+            |  &#x9;
+            .footer-below
+                .container
+                    .row
+                        .col-lg-12
+                            |  &#x9; Copyright &copy; Your Website 2014
+        // Scroll to Top Button (Only visible on small and extra-small screen sizes)
+        .scroll-top.page-scroll.visible-xs.visible-sm
+            a.btn.btn-primary(href='#page-top')
+                i.fa.fa-chevron-up
+         // jQuery
+        script(src='/javascripts/jquery.js')
+        // Bootstrap Core JavaScript
+        script(src='/javascripts/bootstrap.min.js')
+        // Plugin JavaScript
+        script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js')
+        |  &#x9;
+        script(src='/javascripts/classie.js')
+        |  &#x9;
+        script(src='/javascripts/cbpAnimatedHeader.js')
+        // Contact Form JavaScript
+        script(src='/javascripts/jqBootstrapValidation.js')
+        |  &#x9;
+        script(src='/javascripts/contact_me.js')
+        // Custom Theme JavaScript
+        script(src='/javascripts/freelancer.js')
+                 

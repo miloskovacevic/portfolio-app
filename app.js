@@ -13,7 +13,7 @@ var session = require('express-session');
 
 
 
-var routes = require('./routes');
+var index = require('./routes/index');
 var users = require('./routes/user');
 
 var app = express();
@@ -66,7 +66,8 @@ app.use(expressValidator({
     }
 }));
 
-app.get('/', routes.index);
+//rutiranje
+app.get('/', index);
 app.get('/users', users.list);
 
 /// catch 404 and forwarding to error handler
