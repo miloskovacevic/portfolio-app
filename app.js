@@ -14,7 +14,8 @@ var session = require('express-session');
 
 
 var index = require('./routes/index');
-var users = require('./routes/user');
+var admin = require('./routes/admin');
+
 
 var app = express();
 
@@ -66,9 +67,10 @@ app.use(expressValidator({
     }
 }));
 
+
 //rutiranje
-app.get('/', index);
-app.get('/users', users.list);
+app.use('/', index);
+app.use('/admin', admin);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {

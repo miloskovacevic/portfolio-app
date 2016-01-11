@@ -16,7 +16,8 @@ router.get('/', function (req, res) {
     if(err) throw err;
 
     res.render('index', {
-      "rows" : rows
+      "rows" : rows,
+      layout: 'layout'
     });
   });
 });
