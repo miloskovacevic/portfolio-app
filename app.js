@@ -20,7 +20,7 @@ var admin = require('./routes/admin');
 var app = express();
 
 //===>>> STARTS:MIDDLEWARE <<<===
-app.use(multer({dest:'./uploads/'}).single('singleInputFileName'));
+app.use(multer({dest:'./uploads'}).single('singleInputFileName'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
